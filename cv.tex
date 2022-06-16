@@ -1,0 +1,246 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\usepackage{multicol}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Masoud Haghbin}{Tekiyeh}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+\address{Tehran , Iran }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+  
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l} 
+    {\bfseries #4}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l} 
+    {\itshape #3}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+%   \vfill\noindent
+  \begin{tabular}{@{}l} 
+    {\bfseries #2}
+  \end{tabular}
+  \hfill% move it to the right
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-23mm}
+
+\begin{center}
+\begin{tabular}{ c c c }
+  \faEnvelopeO\enspace masoud.haghbin7@gmail.com & \faGithub\enspace masoudhaghbin &  \faMobile\enspace +989022022411\\  
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{ c}
+  \faStackOverflow\enspace\faLinkedin\enspace Masoud Haghbin
+\end{tabular}
+\end{center}
+
+\section{EDUCATION}
+
+
+{\customcventry{September 2016 - May 2019}{Master of Information Technology in Computer Networks engineering}{Amirkabir University of Technology}{Tehran , Iran}{}{}}
+
+{\customcventry{September 2017 - March 2018}{Exchange Student of Information Technology }{University of Passau}{Passau , Germany}{}{}}
+
+{\customcventry{September 2012 - September 2016}{Bachelor of Technology in Computer engineering}{Iran University of Science and Technology}{Tehran, Iran}{}{}}
+
+\section{EXPERIENCE}
+{\customcventry{July 2019 - Now}{Backend Software Engineer}{Snapp!}{Tehran, Iran}{}
+{\begin{itemize}
+  \item Snapp is the first and leading mobile and web-based ride-hailing platform like Uber in Iran. Snapp is currently on the verge of scaling and has more than 1.9 million rides each day.
+  \item In Snapp, I’m responsible for building and maintaining highly scalable and available microservices like Ride Offering Service, Driver Scoring Service, Driver Location Tracking Service with more than 20K RPS.  
+  \item  Technologies used: \textbf{Golang, Lumen, Redis, NATS Core\&Streaming Cloud Messaging, MariaDb, EMQ, Monitoring with Grafana and Prometheus, Load testing with K6, CI/CD, Docker, Openshift, RabbitMQ, Ansible, Circuit Breaker, Open Tracing, Jaeger, Profiling, Helm Charts, Swagger}
+\end{itemize}
+}
+}
+{\customcventry{June 2020 - Now}{Backend Team Lead}{Sportiv}{Telecommute Toronto, Canada}{}
+{\begin{itemize}
+  \item Sportiv is a Canadean start-up that helps you to play more of the sports you love.
+  \item As the team lead of Backend team in Sportiv, I have the job of leading a team of back-end developers, in developing APIs for business.
+  \item Technologies used: \textbf{Laravel, MySQL, Redis, Gitlab CI/CD, Sentry, Firebase, Pubnub Messaging}
+\end{itemize}
+}
+}
+{\customcventry{December 2017 - September  2019}{Backend Software Engineer}{Andishe Computer Co}{Tehran, Iran}{}
+{\begin{itemize}
+  \item Developing the new version of Web-based Electricity Billing Application which is used by 6-7 Power Distribution Companies which handles the data of over 10M Power subscribers from all over the country
+  \item Technologies used: \textbf{Laravel, Redis, MongoDB, Node.js, SQLServer}
+\end{itemize}
+}
+}
+{\customcventry{April 2017 - September 2017}{Backend Software Engineer}{Behpardaz Pishro Co}{Tehran, Iran}{}
+{\begin{itemize}
+  \item Developed CAS2M. A web-based system ordered by Tavanir Company Gathering information of about 32M subscribers of Electricity from all over the country, Generating reports on many aspect of the data, e.g. Sales, Receipts, Branch Infos etc
+  \item Authomatic Calcuation of almost 100000 Bills from any of 56 Power Distibution Companies every day and producing the error reports.
+  \item Gathering financial data generated by Iran Central Bank (almost 2000 documents per day) and generating financial reports
+  \item Technologies used: \textbf{Laravel, MongoDB, Oracle, Bootstrap, jQuery}
+\end{itemize}
+}
+}
+{\customcventry{May 2015 - February 2017}{Backend Software Engineer}{SociaSoft Co}{Tehran, Iran}{}
+{\begin{itemize}
+  \item Developed and Deployed  www.Tooshe.net web Application
+  \item Tooshe is a collaborative community that connects travelers with people with shipping needs  (like sending or buying Products from all around the world.) in order to decrease shipping fees
+    \item Technologies used: \textbf{Laravel, MySQL, HTML, CSS, jQuery}
+\end{itemize}
+}
+}
+
+\section{PROJECTS}
+
+{\customcvproject{Narnia Online Shop}{ August 2018 - Present}
+  {\begin{itemize}
+    \item Co-Founder and Technical Manager at Narnia.
+    \item Narnia is an Online Shopping Startup providing products of Fantasy World like Movies,T.V. Series and Games
+    \item Developed and Deployed www.narnia.ir Website Front-End and Back-End
+  \end{itemize}
+  }
+}
+
+{\customcvproject{Resource Allocation with QoS in Software Defined Networks}{May 2018}
+{\begin{itemize}
+  \item Allocating Network Resources in order to satisfy SLA and user QoS in SDN.
+  \item Master's Degree thesis in AmirKabir University of Technology
+  \item Technologies used :GAMS,OpenDayLight
+\end{itemize}
+}
+
+{\customcvproject{Application-aware load balancing method in SDN}{September 2016}
+{\begin{itemize}
+  \item A Thesis Submitted for the Degree of Bachelor of Science
+  \item Implemented an application aware load balancing method in OpenDayLight Controller with JAVA.
+\end{itemize}
+}
+}
+
+
+\section{SKILLS}
+{\begin{itemize}
+\item Strong technical skills, knowledge in \textbf{PHP} programming language and \textbf{Laravel} Framework
+\item Very Good knowledge in \textbf{Golang}
+\item Very good knowledge of relevant technologies, such as: \textbf{Redis, Caching, Git, CI/CD, Testing, Docker, Openshift, Nginx, Cloud Messaging, Monitoring, Grafana, Prometheus, MariaDb, EMQ, Load testing, Message Brokers like RabbitMQ, Ansible, Tracing and Profiling, Helm , Swagger, MongoDB, MySQL, SQL Server, Oracle, REST}
+\item Good Knowledge of \textbf{Design Patterns}, OOP, MVC, CRUD, SOLID
+\item Good knowledge in \textbf{Python}
+\item Good Knowledge in \textbf{Linux} and familiar with \textbf{bash scripting}
+\item Familiar with HTML, CSS, JavaScript , jQuery and a bit in Angular
+\item Good Knowledge in Computer Networks, Network and Socket Programming,Wireless Networking and new Network paradigms like SDN and NFV,OpenDayLight,Mininet,GNS3
+\item Excellent English communication skills
+\item Rapid Learner and eager to learn new technologies
+\end{itemize}
+
+}
+
+
+\section{ACHIEVEMENTS}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+    	\begin{itemize}
+          \item Nominee for best Website of year in Iran Web and Mobile Festival for Tooshe in its Category
+          \item Completed English Course at Shokooh English Institute
+          \item CCNA and Network+ Degree with Score of 100
+          \item A1 Deutsch Degree from University of Passau 
+		\end{itemize}}%
+\end{minipage}%
+      
+}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
+
